@@ -14,6 +14,6 @@ class Core
         return "TestSite";
     }
     public static function IsMaintained() {
-        return true;
+        return false;
     }
 }
