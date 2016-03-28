@@ -8,6 +8,8 @@
 
 namespace id;
 
+// Security Feature
+if (!defined('_isScript')) exit();
 
 //Includes (require_once) ------------------------
 require_once("User.php");

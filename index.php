@@ -1,6 +1,11 @@
 <?php
+
+// Security Feature
+define('_isScript', 1);
+
 require_once ("class/Core.php");
 require_once("class/UserSystem.php");
+
 if(id\Core::IsMaintained()) {
     echo "Wartungsarbeiten!!!";
     die();
