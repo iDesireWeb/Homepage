@@ -6,10 +6,12 @@
  * Time: 20:36
  */
 
-
 namespace id;
 
-use id;
+
+//Includes (require_once) ------------------------
+require_once("User.php");
+//End Includes -----------------------------------
 
 class UserSystem
 {
