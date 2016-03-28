@@ -8,7 +8,6 @@
 
 namespace id;
 
-use id;
 
 class User
 {
