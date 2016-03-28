@@ -6,14 +6,20 @@ define('_isScript', 1);
 require_once ("class/Core.php");
 require_once("class/UserSystem.php");
 
-if(id\Core::IsMaintained()) {
+if(id\Core::IsMaintained())
+{
     echo "Wartungsarbeiten!!!";
     die();
 }
-if(!isset($_GET['site'])){
+
+if(!isset($_GET['site']))
+{
     header('Location: index.php?site=index');
-}else {
-    switch ($_GET['site']) {
+}
+else
+{
+    switch ($_GET['site'])
+    {
         case "index":
         {
             echo "Hallo index";
