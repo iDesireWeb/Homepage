@@ -14,5 +14,6 @@ class User
     public $UserName;
     public $UserID;
     public $UserRank;
+    public $UserAvatar;
     
 }
