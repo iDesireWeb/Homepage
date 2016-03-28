@@ -11,5 +11,8 @@ namespace id;
 
 class User
 {
- mööp
+    public $UserName;
+    public $UserID;
+    public $UserRank;
+    
 }
