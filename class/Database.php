@@ -28,7 +28,7 @@ class Database
                 $this->settings['db_password'],
                 $this->settings['db_name']);
 
-            echo 'Database is running....';
+            var_dump('Database is running....');
         }
         catch($e)
         {
