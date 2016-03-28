@@ -6,33 +6,31 @@
  * Time: 21:31
  */
 
+namespace id;
+
 // Security Feature
 if (!defined('_isScript')) exit();
-
-public $db = null;
-private $settings;
 
 class Database
 {
     public $db = null;
-
+    private $settings;
+    
     public function __construct($settings)
     {
         $this->settings = $settings;
 
         try
         {
-            $this->db = new PDO(
-                "mysql:host=" . $this->settings['db_host'] . ";dbname=" . $this->settings['db_host'],
-                $this->settings['db_username']
-                $this->settings['db_password']
-            )
+            $this->db = new mysqli(
+                $this->settings['db_host'],
+                $this->settings['db_username'],
+                $this->settings['db_password'],
+                $this->settings['db_name']);
         }
-        catch(PDOException $e)
+        catch()
         {
-            die ('<p>Failed to connect to MySQL.</p>');
+            die("MySQL Fehler: ".$this->db->connect_error."(".$this->db->connect_errno.")");
         }
     }
-
-    public
 }
