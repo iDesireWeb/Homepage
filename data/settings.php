@@ -18,7 +18,7 @@ $settings['debug_mode']				= "true";
 $settings['steam_api_key']          = "289888B0EC24E2F070ACC0885A501C34";
 
 // Database Settings
-$settings['db_host']				= "";
-$settings['db_username']			= "";
-$settings['db_password']			= "";
-$settings['db_name']				= "";
+$settings['db_host']				= "db4free.net";
+$settings['db_username']			= "idesire";
+$settings['db_password']			= "idesire2016";
+$settings['db_name']				= "idesire";

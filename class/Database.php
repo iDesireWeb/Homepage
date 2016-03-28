@@ -27,10 +27,12 @@ class Database
                 $this->settings['db_username'],
                 $this->settings['db_password'],
                 $this->settings['db_name']);
+
+            echo 'Database is running....';
         }
-        catch()
+        catch($e)
         {
-            die("MySQL Fehler: ".$this->db->connect_error."(".$this->db->connect_errno.")");
+            die("MySQL Fehler: ".$this->db->connect_error."(".$this->db->connect_errno.")".$e);
         }
     }
 }
