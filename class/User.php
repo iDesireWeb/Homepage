@@ -12,9 +12,13 @@ use id;
 
 class User
 {
+    //Name des Users
     public $UserName;
+    //ID des Users
     public $UserID;
+    //Rang des Users
     public $UserRank;
+    //Avatar (url) des Users
     public $UserAvatar;
     
 }
