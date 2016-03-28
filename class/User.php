@@ -19,6 +19,14 @@ class User
     public $UserRank;
     //Avatar (url) des Users
     public $UserAvatar;
-    
+
+
+    public function __construct($name, $id, $rank, $avatar)
+    {
+        $this->UserName = $name;
+        $this->UserID = $id;
+        $this->UserRank = $rank;
+        $this->UserAvatar = $avatar;
+    }
 }
 
