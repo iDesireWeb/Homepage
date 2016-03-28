@@ -8,6 +8,7 @@
 
 namespace id;
 
+use id;
 
 class User
 {
@@ -17,3 +18,4 @@ class User
     public $UserAvatar;
     
 }
+

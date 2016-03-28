@@ -1,7 +1,3 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Marcel
- * Date: 28.03.2016
- * Time: 20:00
- */
+
+require_once("class/UserSystem.php");

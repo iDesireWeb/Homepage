@@ -5,7 +5,7 @@
  * Date: 28.03.2016
  * Time: 20:36
  */
-require_once
+
 
 namespace id;
 
