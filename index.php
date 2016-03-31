@@ -1,7 +1,6 @@
 <?php
 define('_isScript', 1);
-error_reporting(E_ALL);
-require_once ("class/Core.php");
+require_once("class/Core.php");
 require_once("class/UserSystem.php");
 require_once("class/User.php");
 if(id\Core::IsMaintained()) {
@@ -14,8 +13,8 @@ if(id\Core::IsMaintained()) {
 $usersys = new \id\UserSystem();
 $userl = $usersys->getUserByName("tobi");
 
-echo "Username:" .$userl->UserName;
-echo "SteamID: " .$userl->SteamID;
+echo "Username: " .$userl->UserName ."<br>";
+echo "SteamID: " .$userl->SteamID ."<br>";
 
 //END USER DEMO!!!!!!
 

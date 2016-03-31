@@ -17,7 +17,7 @@ class Database
 
     public function __construct()
     {
-        $this->mysqlPDO = new PDO('mysql:host=memento-mori-community.de;dbname=idesire', 'idesire', 'idesire2016');
+        $this->mysqlPDO = new \PDO('mysql:host=127.0.0.1;port=3306;dbname=idesire', 'root', '');
     }
 
     public function getMysqlPDO() {
