@@ -20,13 +20,16 @@ class User
     //Avatar (url) des Users
     public $UserAvatar;
 
+    public $SteamID;
 
-    public function __construct($name, $id, $rank, $avatar)
+
+    public function __construct($name, $id, $rank, $avatar, $steam)
     {
         $this->UserName = $name;
         $this->UserID = $id;
         $this->UserRank = $rank;
         $this->UserAvatar = $avatar;
+        $this->SteamID = $steam;
     }
 }
 

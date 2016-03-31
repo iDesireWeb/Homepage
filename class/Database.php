@@ -9,30 +9,18 @@
 namespace id;
 
 // Security Feature
-if (!defined('_isScript')) exit();
+
 
 class Database
 {
-    public $db = null;
-    private $settings;
-    
-    public function __construct($settings)
+    public $mysqlPDO;
+
+    public function __construct()
     {
-        $this->settings = $settings;
+        $this->mysqlPDO = new PDO('mysql:host=memento-mori-community.de;dbname=idesire', 'idesire', 'idesire2016');
+    }
 
-        try
-        {
-            $this->db = new mysqli(
-                $this->settings['db_host'],
-                $this->settings['db_username'],
-                $this->settings['db_password'],
-                $this->settings['db_name']);
-
-            echo 'Database is running....';
-        }
-        catch($e)
-        {
-            die("MySQL Fehler: ".$this->db->connect_error."(".$this->db->connect_errno.")".$e);
-        }
+    public function getMysqlPDO() {
+        return $this->mysqlPDO;
     }
 }
