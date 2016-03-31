@@ -8,6 +8,9 @@
 
 namespace id;
 
+// Security Feature
+if (!defined('_isScript')) exit();
+
 class Core
 {
     public static function GetSiteName() {

@@ -22,3 +22,4 @@ $settings['db_host']				= "db4free.net";
 $settings['db_username']			= "idesire";
 $settings['db_password']			= "idesire2016";
 $settings['db_name']				= "idesire";
+
