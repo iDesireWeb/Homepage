@@ -1,4 +1,5 @@
 <?php
+define('_isScript', 1);
 error_reporting(E_ALL);
 require_once ("class/Core.php");
 require_once("class/UserSystem.php");
