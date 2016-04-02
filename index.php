@@ -1,10 +1,14 @@
 <?php
 define('_isScript', 1);
+echo '<html>';
+
+include('template/header.php');
+
 require_once("class/Core.php");
 require_once("class/UserSystem.php");
 require_once("class/User.php");
 if(id\Core::IsMaintained()) {
-    echo "Wartungsarbeiten!!!";
+    include('template/maintaince.php');
     die();
 }
 
@@ -25,18 +29,24 @@ if(!isset($_GET['site'])){
     switch ($_GET['site']) {
         case "index":
         {
-            echo "Hallo index";
+            define('current_site', 'index');
             break;
         }
         case "login":
         {
-            echo "Hallo login";
+            define('current_site', 'login');
             break;
         }
         default:
         {
+            define('current_site', '404');
             echo "404";
             break;
         }
     }
 }
+
+
+include('template/'. constant('current_site') .'.php');
+
+ echo '</html>';
