@@ -7,4 +7,5 @@
  */?>
 <head>
     <link rel="stylesheet" href="template/css/bootstrap.min.css">
+    <link rel="stylesheet" href="template/css/animate.min.css">
 </head>

@@ -37,6 +37,14 @@ if(!isset($_GET['site'])){
             define('current_site', 'login');
             break;
         }
+        case "forum":
+        {
+            if(defined('thread')){
+
+            }
+            define('current_site', 'forum_overview');
+            break;
+        }
         default:
         {
             define('current_site', '404');
@@ -45,7 +53,7 @@ if(!isset($_GET['site'])){
         }
     }
 }
-
+include('template/navbar.php');
 
 include('template/'. constant('current_site') .'.php');
 
