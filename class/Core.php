@@ -20,4 +20,7 @@ class Core
     public static function IsMaintained() {
         return false;
     }
+    public static function GetLanguage() {
+
+    }
 }

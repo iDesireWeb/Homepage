@@ -15,7 +15,7 @@
 </style>
 
 
-<div class="container">
+<div class="container animated fadeInRight">
     <div class="row">
         <div class="col-lg-8">
             <div class="centerBlock">

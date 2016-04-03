@@ -14,12 +14,11 @@ if(id\Core::IsMaintained()) {
 
 
 //USER DEMO!!!!!!!
-$usersys = new \id\UserSystem();
-$userl = $usersys->getUserByName("tobi");
+//$usersys = new \id\UserSystem();
+//$userl = $usersys->getUserByName("tobi");
 
-echo "Username: " .$userl->UserName ."<br>";
-echo "SteamID: " .$userl->SteamID ."<br>";
-
+//echo "Username: " .$userl->UserName ."<br>";
+//echo "SteamID: " .$userl->SteamID ."<br>";
 //END USER DEMO!!!!!!
 
 
@@ -48,7 +47,6 @@ if(!isset($_GET['site'])){
         default:
         {
             define('current_site', '404');
-            echo "404";
             break;
         }
     }
