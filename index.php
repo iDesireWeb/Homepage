@@ -1,5 +1,6 @@
 <?php
 define('_isScript', 1);
+session_start();
 echo '<html>';
 
 include('template/header.php');

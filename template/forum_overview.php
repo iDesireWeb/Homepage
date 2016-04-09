@@ -7,7 +7,7 @@
  */  ?>
 
 
-<legend class="legend">Foren Übersicht</legend>
+
 
 
 

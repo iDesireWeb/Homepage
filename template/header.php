@@ -8,10 +8,12 @@
 <head>
     <link rel="stylesheet" href="template/css/bootstrap.min.css">
     <link rel="stylesheet" href="template/css/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="template/js/bootstrap.min.js"></script>
+    <meta name="theme-color" content="#2B3E50" />
     <style>
-        .legend {
-            margin-left: 100px;
-            margin-right: 100px;
+        .center-me {
+            margin: 0 auto;
         }
     </style>
 </head>
