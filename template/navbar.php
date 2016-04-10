@@ -16,6 +16,29 @@
             <li <?php if(constant('current_site') == 'members') echo 'class="active"'; ?>><a href="#">Page 2</a></li>
             <li <?php if(constant('current_site') == 'aboutus') echo 'class="active"'; ?>><a href="#">Page 3</a></li>
         </ul>
+        <?php
+            if(isset($_SESSION['login']) && $_SESSION['login'] == true) {
+                $usersystem_navbar = new id\UserSystem();
+                $navbar_user = $usersystem_navbar->getUserByName($_SESSION['login_username']);
+                ?>
+                <ul class="nav pull-right">
+                    <li class="dropdown">
+                        <a href="properties.php?type=showall" class="dropdown-toggle" data-toggle="dropdown">Willkommen, <?php echo $navbar_user->UserName; ?><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.php?site=logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <?php
+            } else { ?>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.php?site=register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="index.php?site=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            <?php }
+
+        ?>
+
     </div>
 </nav>
 

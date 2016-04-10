@@ -32,6 +32,17 @@ if(!isset($_GET['site'])){
             define('current_site', 'index');
             break;
         }
+        case "logout":
+        {
+            $_SESSION = array();
+            header('Location: index.php?site=login&logout');
+            break;
+        }
+        case "profile":
+        {
+            define('current_site', 'profile');
+            break;
+        }
         case "login":
         {
             define('current_site', 'login');
@@ -53,6 +64,11 @@ if(!isset($_GET['site'])){
     }
 }
 include('template/navbar.php');
+
+
+
+
+
 
 include('template/'. constant('current_site') .'.php');
 

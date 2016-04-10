@@ -49,7 +49,7 @@ class UserSystem
         $data = $localPDO->prepare($sql);
         $data->execute(array(':username' => $param_userName));
         $lUser = $data->fetch();
-        if($lUser == md5($param_userPassword)) {
+        if($lUser['password'] == $param_userPassword) {
             return true;
         } else {
             return false;
