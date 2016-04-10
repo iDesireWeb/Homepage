@@ -8,15 +8,22 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-list"></span>  iDesire</a>
         </div>
-        <ul class="nav navbar-nav animated fadeInRight">
-            <li <?php if(constant('current_site') == 'index') echo 'class="active"'; ?>><a href="index.php?site=index">Home</a></li>
-            <li <?php if(constant('current_site') == 'forum_overview') echo 'class="active"'; ?>><a href="index.php?site=forum">Forum</a></li>
-            <li <?php if(constant('current_site') == 'members') echo 'class="active"'; ?>><a href="#">Page 2</a></li>
-            <li <?php if(constant('current_site') == 'aboutus') echo 'class="active"'; ?>><a href="#">Page 3</a></li>
-        </ul>
-        <?php
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav animated fadeInRight">
+                <li <?php if(constant('current_site') == 'index') echo 'class="active"'; ?>><a href="index.php?site=index">Home</a></li>
+                <li <?php if(constant('current_site') == 'forum_overview') echo 'class="active"'; ?>><a href="index.php?site=forum">Forum</a></li>
+                <li <?php if(constant('current_site') == 'members') echo 'class="active"'; ?>><a href="#">Page 2</a></li>
+                <li <?php if(constant('current_site') == 'aboutus') echo 'class="active"'; ?>><a href="#">Page 3</a></li>
+            </ul>
+            <?php
             if(isset($_SESSION['login']) && $_SESSION['login'] == true) {
                 $usersystem_navbar = new id\UserSystem();
                 $navbar_user = $usersystem_navbar->getUserByName($_SESSION['login_username']);
@@ -37,7 +44,11 @@
                 </ul>
             <?php }
 
-        ?>
+            ?>
+        </div>
+
+
+
 
     </div>
 </nav>

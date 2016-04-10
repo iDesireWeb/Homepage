@@ -57,7 +57,7 @@
         Passwort<br>
         <input type="password" style="max-width: 400px" class="form-control" id="passwort" name="passwort" placeholder="Password"><br>
         <br>
-        <input type="submit" style="width: 400px" class="btn btn-primary btn-lg" name="login_button" id="login_button" value="Login">
+        <input type="submit" style="width: 400px; margin: auto;" class="btn btn-primary btn-lg" name="login_button" id="login_button" value="Login">
 
     </form>
 </div>
